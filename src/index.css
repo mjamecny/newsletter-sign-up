@@ -1,5 +1,6 @@
 :root {
   --tomato: hsl(4, 100%, 67%);
+  --light-tomato: hsl(4, 100%, 92%);
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -29,4 +30,175 @@ body {
 #root {
   height: 100vh;
   background-color: var(--dark-slate-grey);
+}
+
+/* Newsletter sign-up */
+.newsletter-signup {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  background-color: var(--white);
+  height: 100vh;
+}
+
+.newsletter-signup picture img {
+  width: 100%;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+}
+
+.heading {
+  font-size: 3.6rem;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.feature-list li img {
+  margin-top: 0;
+  width: 2rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--dark-slate-grey);
+  padding-block: 1.6rem;
+  cursor: pointer;
+}
+
+.u-mt-auto {
+  margin-top: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-row span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--tomato);
+}
+
+.form-row label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.form-row input {
+  font-family: inherit;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  padding: 1.6rem;
+}
+
+.form-row input:focus {
+  outline: none;
+  border: 1px solid var(--dark-slate-grey);
+}
+
+.form-row input::placeholder {
+  color: var(--grey);
+}
+
+/* Thanks message */
+.thanks-message {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--white);
+  height: 100vh;
+}
+
+.thanks-message .text-box {
+  gap: 2.4rem;
+}
+
+.text-box img {
+  margin-top: auto;
+  width: 6.2rem;
+}
+
+.p-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.p-box h1 {
+  line-height: 1.2;
+  width: 60%;
+}
+
+@media screen and (min-width: 32em) {
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsletter-signup {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 96rem;
+    padding: 2.4rem;
+    border-radius: 30px;
+    height: auto;
+  }
+
+  .newsletter-signup picture {
+    grid-column: 2/3;
+  }
+
+  .text-box {
+    grid-row: 1/2;
+    justify-content: center;
+  }
+
+  .thanks-message {
+    padding: 2.4rem;
+    max-width: 50rem;
+    border-radius: 30px;
+    height: auto;
+  }
+
+  .btn {
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: var(--tomato);
+  }
 }
